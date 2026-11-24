@@ -6,13 +6,14 @@
   <title>Hazem Hossam Ebeid | Junior Data Analyst</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --border: #334155;
-      --text: #f8fafc;
+      --bg: #0b1120;
+      --surface: #131c31;
+      --surface-hover: #18233d;
+      --border: #24324d;
+      --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
-      --accent-hover: #0ea5e9;
+      --accent-soft: rgba(56, 189, 248, 0.12);
     }
 
     * {
@@ -25,208 +26,274 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       padding: 2rem 1rem;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
+    /* Header */
     header {
-      padding: 3rem 0 2rem;
+      padding: 3rem 0 2.5rem;
       border-bottom: 1px solid var(--border);
     }
 
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+    }
+
     header h1 {
-      font-size: 2.25rem;
+      font-size: 2.4rem;
       font-weight: 700;
       letter-spacing: -0.02em;
     }
 
     header .role {
       color: var(--accent);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 500;
       margin-top: 0.25rem;
     }
 
     header p {
       color: var(--muted);
-      max-width: 680px;
+      max-width: 720px;
       margin-top: 1rem;
-      font-size: 1rem;
+      font-size: 1.02rem;
     }
 
-    .links {
+    .social-links {
       display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
+      gap: 0.85rem;
+      margin-top: 1.75rem;
       flex-wrap: wrap;
     }
 
-    .links a {
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       text-decoration: none;
       color: var(--text);
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      transition: 0.2s;
+      padding: 0.6rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
     }
 
-    .links a:hover {
+    .btn:hover {
       border-color: var(--accent);
       color: var(--accent);
+      background: var(--surface-hover);
+      transform: translateY(-1px);
     }
 
+    .btn-primary {
+      background: var(--accent);
+      color: #0b1120;
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #7dd3fc;
+      color: #0b1120;
+    }
+
+    /* Sections */
     section {
-      margin-top: 2.75rem;
+      margin-top: 3rem;
     }
 
     h2 {
-      font-size: 1.35rem;
-      margin-bottom: 1.25rem;
+      font-size: 1.4rem;
+      margin-bottom: 1.35rem;
       color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
+    /* Skills */
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
     .skill-tag {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.4rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      color: var(--accent);
+      padding: 0.45rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
     }
 
+    /* Projects */
     .projects-grid {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
     }
 
     .project-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.22rem;
+      color: var(--text);
     }
 
-    .project-meta {
-      font-size: 0.85rem;
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+
+    .tool-pill {
+      font-size: 0.78rem;
       color: var(--accent);
-      margin-bottom: 0.85rem;
+      background: var(--accent-soft);
+      padding: 0.22rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 500;
     }
 
     .project-card ul {
       padding-left: 1.2rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
 
     .project-card li {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .project-card li strong {
+      color: var(--text);
     }
 
     .project-links {
-      margin-top: 1.1rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
       display: flex;
-      gap: 1rem;
+      gap: 1.25rem;
+      flex-wrap: wrap;
     }
 
     .project-links a {
       color: var(--accent);
       text-decoration: none;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
     .project-links a:hover {
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
       margin-top: 4rem;
-      padding-top: 1.5rem;
+      padding: 2rem 0 1rem;
       border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
       color: var(--muted);
-      font-size: 0.85rem;
-      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
+      <span class="badge">Open to Junior Data Analyst & BI Roles</span>
       <h1>Hazem Hossam Ebeid</h1>
       <div class="role">Junior Data Analyst</div>
       <p>
-        Computer Science graduate (Information Systems major) focused on turning raw datasets into clear business insights through data cleaning, SQL querying, Python analysis, and interactive Power BI dashboards.
+        Computer Science graduate (Information Systems major) specializing in data cleaning, exploratory data analysis, SQL querying, Python (Pandas), and interactive Power BI dashboards to support data-driven business decisions.
       </p>
-      <div class="links">
-        <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank">LinkedIn</a>
-        <a href="mailto:your.email@example.com">Email Me</a>
+      <div class="social-links">
+        <a href="https://github.com/HazemH0sam" target="_blank" class="btn btn-primary">
+          GitHub (@HazemH0sam)
+        </a>
+        <a href="https://www.linkedin.com/in/hazem--hossam" target="_blank" class="btn">
+          LinkedIn Profile
+        </a>
+        <a href="mailto:hazemebid6@gmail.com" class="btn">
+          Email Me
+        </a>
       </div>
     </header>
 
     <section>
-      <h2>Technical Stack</h2>
+      <h2>Technical Skills</h2>
       <div class="skills-grid">
-        <span class="skill-tag">Microsoft Excel</span>
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">Python (Pandas)</span>
-        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Microsoft Excel (Pivot Tables, Power Query, XLOOKUP)</span>
+        <span class="skill-tag">SQL (Joins, CTEs, Aggregations)</span>
+        <span class="skill-tag">Python (Pandas, NumPy, Matplotlib)</span>
+        <span class="skill-tag">Power BI (DAX, Data Modeling, Dashboards)</span>
         <span class="skill-tag">Data Cleaning & EDA</span>
         <span class="skill-tag">Git & GitHub</span>
       </div>
     </section>
 
     <section>
-      <h2>Featured Projects</h2>
+      <h2>Featured Data Analysis Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>End-to-End E-Commerce Sales & Performance Analysis</h3>
-          <div class="project-meta">Python (Pandas) • SQL • Power BI</div>
-          <ul>
-            <li><strong>Business Objective:</strong> Identify revenue drivers, top-performing categories, and regional sales trends to support commercial decisions.</li>
-            <li><strong>Process:</strong> Cleaned raw transactional records using Python (Pandas), structured analytical queries in SQL, and built an interactive Power BI report.</li>
-            <li><strong>Outcome:</strong> Highlighted key revenue bottlenecks and seasonal demand shifts with actionable KPI tracking.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/YOUR-USERNAME/ecommerce-analysis" target="_blank">View Code on GitHub →</a>
-          </div>
-        </div>
 
+        <!-- Project 1 -->
         <div class="project-card">
-          <h3>Data Analysis Internship Tasks — Codveda Technologies</h3>
-          <div class="project-meta">Excel • Python • Data Visualization</div>
-          <ul>
-            <li><strong>Business Objective:</strong> Execute exploratory data analysis and reporting workflows across structured datasets.</li>
-            <li><strong>Process:</strong> Handled missing values, standardized data formats, and summarized statistical findings into visual reports.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/YOUR-USERNAME/codveda-internship" target="_blank">View Repository →</a>
+          <div class="project-header">
+            <h3>1. End-to-End E-Commerce Sales & Performance Analysis</h3>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © 2026 Hazem Hossam Ebeid • Built & Hosted on Vercel
-    </footer>
-  </div>
-</body>
-</html>
+          <div class="tools-list">
