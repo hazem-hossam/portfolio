@@ -122,9 +122,6 @@
       font-size: 1.4rem;
       margin-bottom: 1.35rem;
       color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     /* Skills */
@@ -147,7 +144,7 @@
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     .project-card {
@@ -162,25 +159,17 @@
       border-color: var(--accent);
     }
 
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.75rem;
-    }
-
     .project-card h3 {
-      font-size: 1.22rem;
+      font-size: 1.24rem;
       color: var(--text);
+      margin-bottom: 0.65rem;
     }
 
     .tools-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.45rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
     }
 
     .tool-pill {
@@ -190,6 +179,21 @@
       padding: 0.22rem 0.65rem;
       border-radius: 6px;
       font-weight: 500;
+    }
+
+    .project-preview {
+      margin: 1rem 0 1.25rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #0f172a;
+    }
+
+    .project-preview img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      display: block;
     }
 
     .project-card ul {
@@ -207,18 +211,18 @@
     }
 
     .project-links {
-      margin-top: 1.25rem;
+      margin-top: 1.35rem;
       padding-top: 1rem;
       border-top: 1px solid var(--border);
       display: flex;
-      gap: 1.25rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
     }
 
     .project-links a {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
@@ -263,8 +267,8 @@
         Computer Science graduate (Information Systems major) specializing in data cleaning, exploratory data analysis, SQL querying, Python (Pandas), and interactive Power BI dashboards to support data-driven business decisions.
       </p>
       <div class="social-links">
-        <a href="https://github.com/Hazem-Hossam-da" target="_blank" class="btn btn-primary">
-          GitHub (@Hazem-Hossam-da)
+        <a href="https://github.com/hazem-hossam" target="_blank" class="btn btn-primary">
+          GitHub (@hazem-hossam)
         </a>
         <a href="https://www.linkedin.com/in/Hazem-Hossam-da" target="_blank" class="btn">
           LinkedIn Profile
@@ -293,13 +297,14 @@
 
         <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-header">
-            <h3>1. End-to-End E-Commerce Sales & Performance Analysis</h3>
-          </div>
+          <h3>1. End-to-End E-Commerce Sales & Performance Analysis</h3>
           <div class="tools-list">
             <span class="tool-pill">Python (Pandas)</span>
             <span class="tool-pill">SQL</span>
             <span class="tool-pill">Power BI</span>
+          </div>
+          <div class="project-preview">
+            <img src="ecommerce-dashboard.png" alt="E-Commerce Power BI Dashboard Preview" onerror="this.parentElement.style.display='none'" />
           </div>
           <ul>
             <li><strong>Business Problem:</strong> Identify revenue drivers, underperforming product categories, and regional sales trends across transactional data.</li>
@@ -307,19 +312,20 @@
             <li><strong>Key Impact:</strong> Surfaced top-margin categories, seasonal revenue peaks, and actionable recommendations to improve conversion and retention.</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Hazem-Hossam-da" target="_blank">View Repository on GitHub →</a>
+            <a href="https://github.com/hazem-hossam/ecommerce-sales-analysis" target="_blank">View Repository on GitHub →</a>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="project-card">
-          <div class="project-header">
-            <h3>2. Applied Data Analysis & Reporting — Codveda Internship</h3>
-          </div>
+          <h3>2. Applied Data Analysis & Reporting — Codveda Internship</h3>
           <div class="tools-list">
             <span class="tool-pill">Python</span>
             <span class="tool-pill">Microsoft Excel</span>
             <span class="tool-pill">Exploratory Data Analysis</span>
+          </div>
+          <div class="project-preview">
+            <img src="codveda-charts.png" alt="Codveda Internship Data Analysis Charts" onerror="this.parentElement.style.display='none'" />
           </div>
           <ul>
             <li><strong>Business Problem:</strong> Transform raw, multi-variable datasets into structured analytical summaries and visual reports during a remote Data Analysis internship.</li>
@@ -327,19 +333,20 @@
             <li><strong>Key Impact:</strong> Delivered reproducible cleaning pipelines and executive-ready visual summaries across assigned analytical tasks.</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Hazem-Hossam-da" target="_blank">View Repository on GitHub →</a>
+            <a href="https://github.com/hazem-hossam/codveda-data-analysis" target="_blank">View Repository on GitHub →</a>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="project-card">
-          <div class="project-header">
-            <h3>3. Customer Churn & Revenue Retention SQL + Excel Analysis</h3>
-          </div>
+          <h3>3. Customer Churn & Revenue Retention SQL + Excel Analysis</h3>
           <div class="tools-list">
             <span class="tool-pill">SQL</span>
             <span class="tool-pill">Microsoft Excel</span>
             <span class="tool-pill">KPI Tracking</span>
+          </div>
+          <div class="project-preview">
+            <img src="churn-kpi.png" alt="Customer Churn KPI Dashboard Preview" onerror="this.parentElement.style.display='none'" />
           </div>
           <ul>
             <li><strong>Business Problem:</strong> Understand why customer churn increases across specific tenure brackets and contract types.</li>
@@ -347,7 +354,7 @@
             <li><strong>Key Impact:</strong> Pinpointed high-risk customer segments within the first 90 days and quantified potential revenue saved through targeted retention offers.</li>
           </ul>
           <div class="project-links">
-            <a href="https://github.com/Hazem-Hossam-da" target="_blank">View Repository on GitHub →</a>
+            <a href="https://github.com/hazem-hossam/customer-churn-analysis" target="_blank">View Repository on GitHub →</a>
           </div>
         </div>
 
@@ -357,7 +364,7 @@
     <footer>
       <span>© 2026 Hazem Hossam Ebeid</span>
       <div>
-        <a href="https://github.com/Hazem-Hossam-da" target="_blank">GitHub</a> •
+        <a href="https://github.com/hazem-hossam" target="_blank">GitHub</a> •
         <a href="https://www.linkedin.com/in/Hazem-Hossam-da" target="_blank">LinkedIn</a>
       </div>
     </footer>
